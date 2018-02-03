@@ -1,0 +1,304 @@
+html:root {
+  --home-card-color: white;
+  --first-card-color: #1da1f2;
+  --second-card-color-start: #008dc7;
+  --second-card-color-end: #009da7;
+  --third-card-color: #e91e63;
+  --color-action: #ff9900;
+  --drop-in-easing-bezier: .73, .14, 1, .99;
+  --light-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  --normal-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  --standard-easing-duration: 0.4s;
+  --standard-easing-bezier: 0.56, 0.26, 0.37, 0.98;
+  --drop-in-animation-delay: 0.77s;
+  --mosaic-grid-gap: 0.33rem; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #f6f6f6;
+  margin: 0; }
+
+input {
+  padding: 0.25rem; }
+
+select {
+  height: 30px; }
+
+img {
+  max-width: 100%; }
+
+html {
+  font-family: 'Open Sans', tahoma, helvetica, sans-serif;
+  font-size: 16px; }
+
+h1 {
+  font-size: 1.29616rem; }
+  @media screen and (min-width: 37.5rem) {
+    h1 {
+      font-size: calc(1.29616rem + 1.14525 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h1 {
+      font-size: 2.44141rem; } }
+
+h2 {
+  font-size: 1.21477rem; }
+  @media screen and (min-width: 37.5rem) {
+    h2 {
+      font-size: calc(1.21477rem + 0.73836 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h2 {
+      font-size: 1.95312rem; } }
+
+h3 {
+  font-size: 1.13849rem; }
+  @media screen and (min-width: 37.5rem) {
+    h3 {
+      font-size: calc(1.13849rem + 0.42401 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h3 {
+      font-size: 1.5625rem; } }
+
+h4 {
+  font-size: 1.067rem; }
+  @media screen and (min-width: 37.5rem) {
+    h4 {
+      font-size: calc(1.067rem + 0.183 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h4 {
+      font-size: 1.25rem; } }
+
+h5 {
+  font-size: 1rem; }
+  @media screen and (min-width: 37.5rem) {
+    h5 {
+      font-size: calc(1rem + 0 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h5 {
+      font-size: 1rem; } }
+
+h6 {
+  font-size: 0.93721rem; }
+  @media screen and (min-width: 37.5rem) {
+    h6 {
+      font-size: calc(0.93721rem + -0.13721 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    h6 {
+      font-size: 0.8rem; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal; }
+
+p,
+a,
+span {
+  line-height: calc(1.4rem + 0.66vw); }
+  p,
+  a,
+  span {
+    font-size: 1rem; }
+    @media screen and (min-width: 37.5rem) {
+      p,
+      a,
+      span {
+        font-size: calc(1rem + 0 * ((100vw - 37.5rem) / 42.5)); } }
+    @media screen and (min-width: 80rem) {
+      p,
+      a,
+      span {
+        font-size: 1rem; } }
+
+input {
+  font-size: 0.93721rem; }
+  @media screen and (min-width: 37.5rem) {
+    input {
+      font-size: calc(0.93721rem + -0.13721 * ((100vw - 37.5rem) / 42.5)); } }
+  @media screen and (min-width: 80rem) {
+    input {
+      font-size: 0.8rem; } }
+
+a {
+  text-decoration: none;
+  color: var(--color-action); }
+  a:visited {
+    color: var(--color-action); }
+
+i.fa {
+  font-size: calc(0.9rem - 10% + 0.66vw); }
+
+.btn {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: inherit;
+  border: 0;
+  background-color: transparent; }
+
+.btn--white {
+  background-color: #fefefe; }
+
+.btn:focus {
+  outline: none; }
+
+.btn--action {
+  color: #fefefe;
+  background-color: #f90; }
+
+.btn--inverted {
+  background-color: #bdc3c7;
+  color: #fefefe; }
+
+.btn--easy {
+  background-color: #2ecc71; }
+
+.btn--medium {
+  background-color: #e67e22; }
+
+.btn--hard {
+  background-color: #c0392b; }
+
+.circleGen {
+  margin-top: 50vh;
+  transform: translateY(-50%); }
+
+.small-bummer {
+  padding: 1rem; }
+
+a:focus,
+a:hover {
+  color: inherit; }
+
+.circleGen-controls {
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right; }
+
+.circleGen-controls h2 {
+  font-size: 1.2rem;
+  font-weight: inherit;
+  margin-bottom: 1rem; }
+
+.circleGen-controls p {
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 400;
+  width: 80%;
+  text-align: left;
+  padding: 0 .25rem; }
+
+.circleGen-controls p > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem; }
+
+.circleGen-controls .destroyed {
+  position: relative; }
+
+.circleGen-controls .goal {
+  font-size: .75rem;
+  position: absolute;
+  right: 6px;
+  bottom: 6px; }
+
+.circleGen-container {
+  width: 800px;
+  height: 400px;
+  clear: both; }
+
+.circleGen-container .outer-box {
+  height: 100%; }
+
+.circleGen-container div {
+  width: 50%;
+  height: 50%;
+  float: left;
+  display: inline-block;
+  overflow: hidden; }
+
+.circleGen-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.circleGen-overlay.active {
+  z-index: 10;
+  opacity: 1; }
+
+.circleGen-overlay span {
+  font-size: 2rem; }
+
+.circleGen-overlay a {
+  width: 20%; }
+
+.parent {
+  border-radius: 0px; }
+
+.leaf {
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5); }
+
+.right {
+  float: right; }
+
+.inter > .leaf:nth-child(4) {
+  background-color: #f90; }
+
+.fancy-link {
+  color: #8a8a8a;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(250, 141, 40, 0.6);
+  box-shadow: 0px 1px 0px 0px rgba(250, 141, 40, 0.6);
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.control-button {
+  color: #8a8a8a;
+  border: 1px solid #cacaca;
+  border-radius: 2px;
+  padding: .4rem .6rem;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out; }
+
+.fade-in {
+  opacity: 0; }
+
+.fade-in-down {
+  -webkit-animation-name: fade-in-down;
+  animation-name: fade-in-down;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  65% {
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
